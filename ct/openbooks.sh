@@ -27,7 +27,7 @@ function update_script() {
         msg_error "No ${APP} Installation Found!"
         exit
     fi
-    bash -c "$(curl -fsSL https://github.com/evan-buss/openbooks/raw/main/install/openbooks_update.sh)" -s --lxc
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/nicolaiwork/ProxmoxVE/main/install/openbooks_update.sh)" -s --lxc
     msg_ok "Updated $APP"
     exit
 }
@@ -36,7 +36,7 @@ start
 build_container
 description
 
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/openbooks-install.sh)" -s --lxc
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/nicolaiwork/ProxmoxVE/main/install/openbooks-install.sh)" -s --lxc
 
 msg_ok "Completed Successfully!\n"
 echo -e "${CREATING}${GN}${APP} setup has been successfully initialized!${CL}"
